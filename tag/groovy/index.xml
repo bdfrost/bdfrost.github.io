@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Brian D. Frost</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <description>Brian D. Frost</description>
+    <title>Groovy | Brian D. Frost</title>
+    <link>/tag/groovy/</link>
+      <atom:link href="/tag/groovy/index.xml" rel="self" type="application/rss+xml" />
+    <description>Groovy</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 11 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/profile-beach.jpg</url>
-      <title>Brian D. Frost</title>
-      <link>/</link>
+      <title>Groovy</title>
+      <link>/tag/groovy/</link>
     </image>
     
     <item>
