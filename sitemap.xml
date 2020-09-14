@@ -4,67 +4,21 @@
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2020-09-14T18:21:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/bfrost/</loc>
-    <lastmod>2020-09-14T18:21:19-05:00</lastmod>
+    <lastmod>2020-09-14T12:58:33-05:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-09-14T18:21:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-09-14T18:21:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/groovy/</loc>
-    <lastmod>2020-09-14T18:21:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/category/homeautomation/</loc>
-    <lastmod>2020-09-14T18:21:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/iftt/</loc>
-    <lastmod>2020-09-14T18:21:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/shinobi/</loc>
-    <lastmod>2020-09-14T18:21:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/smartthings/</loc>
-    <lastmod>2020-09-14T18:21:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/09-14-2020_smartthings_and_shinobi/</loc>
-    <lastmod>2020-09-14T18:21:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-09-14T18:21:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/webhooks/</loc>
-    <lastmod>2020-09-14T18:21:19-05:00</lastmod>
+    <lastmod>2020-09-14T12:58:33-05:00</lastmod>
   </url>
   
   <url>
     <loc>/author/brian-d.-frost/</loc>
     <lastmod>2020-09-14T12:58:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
   </url>
   
   <url>
@@ -84,6 +38,10 @@
   <url>
     <loc>/talk/</loc>
     <lastmod>2019-05-06T17:54:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>
