@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brian D. Frost — Résumé</title>
+  <meta name="description" content="Résumé of Brian D. Frost, Principal Platform Engineer.">
+  <link rel="canonical" href="https://briandfrost.com/resume.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0f172a;
+      --body: #334155;
+      --muted: #64748b;
+      --rule: #e2e8f0;
+      --accent: #0d9488;
+      --bg: #0a0f1a;
+      --sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body { background: var(--bg); font-family: var(--sans); color: var(--body); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+
+    .toolbar {
+      max-width: 8.5in; margin: 0 auto; padding: 20px 16px; display: flex; justify-content: space-between; align-items: center;
+      font-size: 14px; color: #93a3b8; gap: 12px;
+    }
+    .toolbar a:hover { color: #2dd4bf; }
+    .toolbar .dl {
+      background: #2dd4bf; color: #04211d; font-weight: 600; padding: 9px 16px; border-radius: 10px;
+    }
+    .toolbar .dl:hover { background: #5eead4; color: #04211d; }
+
+    .page {
+      background: #fff; max-width: 8.5in; margin: 0 auto 48px; padding: 0.6in 0.65in;
+      box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6); border-radius: 6px;
+      font-size: 9.7pt; line-height: 1.42;
+    }
+
+    header.r { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding-bottom: 14px; border-bottom: 2px solid var(--ink); }
+    header.r h1 { margin: 0; font-size: 28pt; line-height: 1; letter-spacing: -0.03em; color: var(--ink); font-weight: 800; }
+    header.r .title { margin-top: 6px; font-size: 11.5pt; font-weight: 600; color: var(--accent); }
+    header.r .contact { text-align: right; font-size: 9pt; line-height: 1.65; color: var(--body); }
+    header.r .contact a:hover { color: var(--accent); }
+
+    h2 {
+      font-size: 9pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
+      margin: 14px 0 7px; font-weight: 700; display: flex; align-items: center; gap: 10px;
+    }
+    h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+    .summary { margin: 14px 0 0; color: var(--body); }
+    .summary strong { color: var(--ink); }
+
+    .competencies { display: grid; grid-template-columns: 110px 1fr; gap: 3px 14px; font-size: 9.3pt; }
+    .competencies dt { font-weight: 600; color: var(--ink); }
+    .competencies dd { margin: 0; }
+
+    .job { margin-bottom: 9px; break-inside: avoid; }
+    .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .job-head h3 { margin: 0; font-size: 10.5pt; color: var(--ink); font-weight: 700; }
+    .job-head h3 span { font-weight: 500; color: var(--body); }
+    .job-head .dates { font-family: var(--mono); font-size: 8.5pt; color: var(--muted); white-space: nowrap; }
+    .job ul { margin: 4px 0 0; padding-left: 16px; }
+    .job li { margin: 2px 0; }
+    .job li::marker { color: var(--accent); }
+    .job li b { color: var(--ink); font-weight: 600; }
+    .early { font-size: 9.3pt; }
+    .early div { display: flex; justify-content: space-between; gap: 12px; }
+    .early .dates { flex: none; font-family: var(--mono); font-size: 8.5pt; color: var(--muted); }
+
+    .keep { break-inside: avoid; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+    .item { font-size: 9.5pt; margin-bottom: 4px; }
+    .item b { color: var(--ink); }
+    .lapsed { color: var(--muted); font-style: italic; }
+
+    @media (max-width: 720px) {
+      .page { padding: 28px 20px; border-radius: 0; font-size: 14px; }
+      header.r { flex-direction: column; align-items: flex-start; }
+      header.r .contact { text-align: left; }
+      header.r h1 { font-size: 32px; }
+      .competencies { grid-template-columns: 1fr; }
+      .competencies dd { margin-bottom: 6px; }
+      .job-head { flex-direction: column; gap: 0; }
+      .two { grid-template-columns: 1fr; }
+      .early div { flex-direction: column; gap: 0; }
+    }
+
+    @page { size: letter; margin: 0.42in 0.55in; }
+    @media print {
+      body { background: #fff; }
+      .toolbar { display: none; }
+      .page { box-shadow: none; margin: 0; padding: 0; max-width: none; border-radius: 0; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <a href="./">← briandfrost.com</a>
+    <a class="dl" href="Brian-D-Frost-Resume.pdf">Download PDF</a>
+  </div>
+
+  <article class="page">
+    <header class="r">
+      <div>
+        <h1>Brian D. Frost</h1>
+        <div class="title">Principal Platform Engineer</div>
+      </div>
+      <div class="contact">
+        Newalla, OK<br>
+        <a href="mailto:bfrost@brainboy.com">bfrost@brainboy.com</a><br>
+        <a href="https://briandfrost.com">briandfrost.com</a><br>
+        <a href="https://www.linkedin.com/in/brian-frost">linkedin.com/in/brian-frost</a><br><a href="https://github.com/bdfrost">github.com/bdfrost</a>
+      </div>
+    </header>
+
+    <p class="summary">Principal platform engineer who builds low-friction developer platforms that make shipping simple and production stable. At Wendy's I cut the time to deploy new code from <strong>months to hours</strong> and raised availability from <strong>98% to 99.999%+</strong>, for a fraction of total cloud spend. I lead through influence and mentoring, and I keep a GPU-equipped GitOps homelab for testing new platform and AI tooling.</p>
+
+    <h2>Core competencies</h2>
+    <dl class="competencies">
+      <dt>Platform</dt><dd>Kubernetes (GKE), Helm, Docker, internal developer platforms</dd>
+      <dt>GitOps &amp; CI/CD</dt><dd>ArgoCD (app-of-apps), Argo Workflows, GitLab CI/CD, Concourse, Renovate, Sealed Secrets</dd>
+      <dt>Cloud &amp; IaC</dt><dd>GCP, AWS, Terraform, Packer, BOSH, Cloudflare</dd>
+      <dt>Reliability</dt><dd>Prometheus, Grafana, Loki, high-availability architecture, proactive incident prevention</dd>
+      <dt>AI &amp; GPU</dt><dd>NVIDIA GPU Operator, Ollama, Open WebUI, HolmesGPT, kagent</dd>
+      <dt>Systems</dt><dd>Linux (Ubuntu, Red Hat), Bash, TCP/IP, DNS, Go (working knowledge)</dd>
+    </dl>
+
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <h3>The Wendy's Company <span>— Principal Platform Engineer</span></h3>
+        <span class="dates">Aug 2022 – Present</span>
+      </div>
+      <ul>
+        <li>Lead a low-friction developer platform serving <b>150+ developers</b> and <b>600+ services</b> across GKE clusters for Wendy's Mobile/Digital and Enterprise Apps teams, handling <b>dynamic demand peaks at meal times</b>.</li>
+        <li>Built on <b>GKE</b> with <b>ArgoCD</b>, <b>Argo Workflows</b> and <b>Terraform</b>, extended with Go-based Kubernetes operators.</li>
+        <li>Cut the time to deploy new code from <b>months to hours</b> and raised availability from <b>98% to 99.999%+</b>.</li>
+        <li>Platform costs are a <b>small fraction of total cloud spend</b> while carrying <b>growing mobile and web revenue</b>.</li>
+        <li>Mentor engineers on the path to principal engineer.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <h3>Techolution <span>— Sr. Consulting Cloud Engineer</span></h3>
+        <span class="dates">Oct 2017 – Aug 2022</span>
+      </div>
+      <ul>
+        <li>Led managed-services engagement teams across multiple customers using BOSH, Packer, Terraform and Concourse CI/CD pipelines in the cloud.</li>
+        <li>Directed onshore and offshore teams to deliver <b>10x returns</b> on customer investment.</li>
+        <li>Kept an e-commerce platform with <b>millions in daily revenue</b> available through continuous improvement and proactive tooling.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <h3>Earlier <span>— Seagate Technology, Sr. IT Manager</span></h3>
+      </div>
+      <ul>
+        <li>Led a team that <b>cut maintenance costs by 80%</b> while improving uptime, and replaced closed-source cluster storage with open source, <b>eliminating a multi-million-dollar budget line</b>.</li>
+      </ul>
+    </div>
+
+    <section class="keep">
+    <h2>Selected project</h2>
+    <div class="job">
+      <div class="job-head">
+        <h3>GitOps Kubernetes Homelab <span>— github.com/bdfrost/argocd</span></h3>
+        <span class="dates">Dec 2024 – Present</span>
+      </div>
+      <ul>
+        <li>An ArgoCD app-of-apps deploys <b>49 Helm charts</b> (<b>2,500+ commits</b>), with Renovate for updates and Sealed Secrets for credentials in a public repo.</li>
+        <li>NVIDIA GPU Operator serves local LLMs (Ollama, Open WebUI); HolmesGPT and kagent explore AI-assisted operations.</li>
+      </ul>
+    </div>
+
+    </section>
+
+    <div class="two">
+      <div>
+        <h2>Certifications</h2>
+        <div class="item"><b>Google Cloud Professional Cloud Architect</b> <span class="lapsed">(lapsed)</span></div>
+        <div class="item"><b>AWS Certified Solutions Architect</b> <span class="lapsed">(lapsed)</span></div>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <div class="item"><b>Oklahoma Baptist University</b> — B.A., Religion; Minor in Computer Science</div>
+      </div>
+    </div>
+  </article>
+</body>
+</html>
