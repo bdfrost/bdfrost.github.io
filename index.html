@@ -202,6 +202,14 @@
     }
     blockquote p { color: var(--text) !important; font-size: 19px !important; line-height: 1.55; font-weight: 500; margin: 0 0 14px !important; }
     blockquote cite { font-style: normal; font-family: var(--mono); font-size: 13px; color: var(--dim); }
+    .quote-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .quote-next {
+      font-family: var(--mono); font-size: 12px; color: var(--muted); background: none; cursor: pointer;
+      border: 1px solid var(--line-strong); border-radius: 999px; padding: 4px 12px; transition: all .18s ease;
+    }
+    .quote-next:hover { color: var(--accent); border-color: var(--accent); }
+    #quote-text, #quote-cite { transition: opacity .25s ease; }
+    #quote.fading #quote-text, #quote.fading #quote-cite { opacity: 0; }
     blockquote::before {
       content: "\201C"; position: absolute; top: -18px; left: 22px; font-size: 72px; line-height: 1;
       color: var(--accent); font-family: Georgia, serif;
@@ -426,9 +434,12 @@
               <li>Grow the next generation of principal engineers.</li>
             </ul>
           </div>
-          <blockquote class="reveal">
-            <p>You don't lead by pointing and telling people some place to go. You lead by going to that place and making a case.</p>
-            <cite>— Ken Kesey</cite>
+          <blockquote class="reveal" id="quote" aria-live="polite">
+            <p id="quote-text">You don't lead by pointing and telling people some place to go. You lead by going to that place and making a case.</p>
+            <div class="quote-foot">
+              <cite id="quote-cite">— Ken Kesey</cite>
+              <button type="button" id="quote-next" class="quote-next" hidden>Another <span aria-hidden="true">→</span></button>
+            </div>
           </blockquote>
         </div>
       </div>
@@ -644,6 +655,28 @@
     });
     links.addEventListener('click', e => {
       if (e.target.closest('a')) { links.classList.remove('open'); btn.setAttribute('aria-expanded', false); }
+    });
+
+    const quotes = [
+      ["You don't lead by pointing and telling people some place to go. You lead by going to that place and making a case.", "Ken Kesey"],
+      ["A distributed system is one in which the failure of a computer you didn't even know existed can render your own computer unusable.", "Leslie Lamport"],
+      ["It's not DNS. There's no way it's DNS. It was DNS.", "Anonymous sysadmin haiku"],
+      ["Never send a human to do a machine's job.", "Agent Smith, The Matrix"],
+      ["Hope is not a strategy.", "Traditional SRE saying"],
+      ["Simple things should be simple, complex things should be possible.", "Alan Kay"]
+    ];
+    const qBox = document.getElementById('quote');
+    const qText = document.getElementById('quote-text');
+    const qCite = document.getElementById('quote-cite');
+    const qNext = document.getElementById('quote-next');
+    let qi = Math.floor(Math.random() * quotes.length);
+    const showQuote = i => { qText.textContent = quotes[i][0]; qCite.textContent = '— ' + quotes[i][1]; };
+    showQuote(qi);
+    qNext.hidden = false;
+    qNext.addEventListener('click', () => {
+      qi = (qi + 1) % quotes.length;
+      qBox.classList.add('fading');
+      setTimeout(() => { showQuote(qi); qBox.classList.remove('fading'); }, 250);
     });
 
     const els = document.querySelectorAll('.reveal');
